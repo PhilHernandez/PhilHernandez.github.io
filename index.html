@@ -1,22 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Phillippe Hernandez</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phillippe Hernandez • Software Developer</title>
+  <meta name="description" content="Portfolio of Phillippe Hernandez — software developer focused on Python, SQL, and backend tooling in AML/RegTech." />
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-  </nav>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Phillippe Hernandez</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
 
-  <section>
-    <h1>Hello, I'm Phil!</h1>
-    <p>I’m a software developer with experience in fintech, specifically anti-money laundering (AML). 
-        Recently, I’ve been working on upskilling in Python and Java. I'm working on some new projects,
-        so keep an eye out!</p>
-  </section>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Hi, I’m Phillippe — I build dependable, data-driven systems.</h1>
+        <p class="lead">7 years in AML/RegTech. Strong in <strong>Python</strong>, <strong>SQL</strong>, and automation with <strong>Bash</strong>. I care about reliability, clear communication, and shipping work that moves the needle.</p>
+        <p>
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="resume.html">Resume</a>
+          <a class="btn" href="mailto:phillippe@example.com">Contact</a>
+        </p>
+        <ul class="bullets">
+          <li>Banking / AML domain expertise</li>
+          <li>Incident triage & regression testing experience</li>
+          <li>Toronto, ON • Open to roles</li>
+        </ul>
+      </div>
+
+      <aside class="hero-card">
+        <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Phillippe Hernandez">
+        <div>
+          <strong>Quick facts</strong>
+          <ul class="muted list">
+            <li>Python • SQL • Bash • Git</li>
+            <li>Linux • Docker (basics)</li>
+            <li>Focus: backend, data tooling</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/PhilHernandez" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/philhernandez" target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <div class="section-sub">Planned and in-progress personal projects</div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">Coming Soon</span>
+          <div class="muted">Planned • Discord Bot</div>
+          <h3>Habit Tracker Bot</h3>
+          <p>A Discord bot that helps track daily habits, sends reminders, and logs progress over time.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Discord API</span><span class="tag">SQLite</span></div>
+          <p class="more"><em>TBD — repository coming soon</em></p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Coming Soon</span>
+          <div class="muted">Planned • Mobile/Web</div>
+          <h3>Mood Journal App</h3>
+          <p>An app to log daily moods, track patterns over time, and visualize emotional trends.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Chart.js</span></div>
+          <p class="more"><em>TBD — repository coming soon</em></p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Coming Soon</span>
+          <div class="muted">Planned • Mobile/Web</div>
+          <h3>Pet Info App</h3>
+          <p>Keep all your pet’s health records, vet visits, and care schedule organized in one place.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+          <p class="more"><em>TBD — repository coming soon</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Phillippe Hernandez</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -1,2 +1,55 @@
-<h1>Resume</h1>
-<p><a href="assets/Phillippe Hernandez Resume.pdf" download>Download My Resume</a></p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume • Phillippe Hernandez</title>
+  <meta name="description" content="Resume of Phillippe Hernandez — software developer with AML/RegTech experience." />
+  <link rel="icon" href="assets/ph_favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pdf-embed{width:100%; height:80vh; border:1px solid var(--border); border-radius:var(--radius);}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Phillippe Hernandez</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Resume</h1>
+    <p class="lead">Download the PDF or view it inline below.</p>
+    <p>
+      <a class="btn" href="assets/resume.pdf" download>Download PDF</a>
+      <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    </p>
+
+    <!-- If your PDF is in assets/resume.pdf this will embed it. -->
+    <iframe class="pdf-embed" src="assets/resume.pdf"></iframe>
+
+    <section class="section">
+      <h2>Snapshot</h2>
+      <div class="card">
+        <ul class="list">
+          <li><strong>Languages:</strong> Python, SQL, Bash (some Java)</li>
+          <li><strong>Tooling:</strong> Git/GitHub, Linux, Docker (basics)</li>
+          <li><strong>Domain:</strong> Banking & AML, audit, data pipelines</li>
+          <li><strong>Highlight:</strong> Led NPID credential rotation across SAS AML environments; improved auditability and reduced risk.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Phillippe Hernandez</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

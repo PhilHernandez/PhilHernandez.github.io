@@ -1,9 +1,62 @@
-<h1>Projects</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • Phillippe Hernandez</title>
+  <meta name="description" content="Projects by Phillippe Hernandez — upcoming work in development." />
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Phillippe Hernandez</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="project">
-  <h2>Project Alpha - TBD!</h2>
-  <p>This project is a work in progress.</p>
-  <!--
-  <a href="https://github.com/yourusername/project-link">View on GitHub</a>
-  -->
-</div>
+  <main class="container">
+    <h1>Projects</h1>
+    <p class="lead">Some personal projects I’m working on or planning to build soon.</p>
+
+    <section class="section grid">
+      <article class="card">
+        <span class="badge">Coming Soon</span>
+        <div class="muted">Planned • Discord Bot</div>
+        <h3>Habit Tracker Bot</h3>
+        <p>A Discord bot that helps track daily habits, sends reminders, and logs progress over time.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Discord API</span><span class="tag">SQLite</span></div>
+        <p class="more"><em>TBD — repository coming soon</em></p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Coming Soon</span>
+        <div class="muted">Planned • Mobile/Web</div>
+        <h3>Mood Journal App</h3>
+        <p>An app to log daily moods, track patterns over time, and visualize emotional trends.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Chart.js</span></div>
+        <p class="more"><em>TBD — repository coming soon</em></p>
+      </article>
+
+      <article class="card">
+        <span class="badge">Coming Soon</span>
+        <div class="muted">Planned • Mobile/Web</div>
+        <h3>Pet Info App</h3>
+        <p>Keep all your pet’s health records, vet visits, and care schedule organized in one place.</p>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div>
+        <p class="more"><em>TBD — repository coming soon</em></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Phillippe Hernandez</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
