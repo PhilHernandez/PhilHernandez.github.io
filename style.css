@@ -69,7 +69,74 @@ h1{font-size:clamp(28px,4vw,44px); line-height:1.12; margin:10px 0}
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
+    position: relative;
+    overflow: hidden; /* ensures the shine effect stays inside the badge */
   }
-
+  
+  /* Shimmer effect overlay */
+  .badge::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    transform: skewX(-20deg);
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes shimmer {
+    0% { left: -50%; }
+    100% { left: 150%; }
+  }
+  
+/* --- Cool winter theme overrides --- */
+:root{
+    /* Cool, light base */
+    --bg:#f8fbfd;         /* pale icy blue */
+    --panel:#ffffff;
+    --text:#1a1d23;       /* dark charcoal */
+    --muted:#5b6270;
+    --border:#e2e7ec;
+  
+    /* Keep your brand accents but adjust slightly cooler */
+    --brand:#4a90e2;      /* frost blue */
+    --brand-2:#7fd1d8;    /* glacier teal */
+  
+    /* Cool winter pastel stripes */
+    --stripe-1:#edf4fa;   /* frost white-blue */
+    --stripe-2:#e7f0f5;   /* powder blue */
+    --stripe-3:#e3f6f5;   /* icy teal */
+    --stripe-4:#eaeaf9;   /* pale lavender */
+    --stripe-5:#f2f4f8;   /* soft gray-blue */
+  }
+  
+  /* Replace dark gradient with clean light background */
+  body { background: var(--bg); color: var(--text); }
+  
+  /* Section “band” helpers (in-container stripes) */
+  .band{
+    background: var(--stripe-1);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 20px;
+    margin: 24px 0;
+  }
+  
+  /* Color variants for alternating sections */
+  .band--frost    { background: var(--stripe-1); }
+  .band--powder   { background: var(--stripe-2); }
+  .band--ice      { background: var(--stripe-3); }
+  .band--lavender { background: var(--stripe-4); }
+  .band--slate    { background: var(--stripe-5); }
+  
+  
 /* Footer */
-.site-footer{margin-top:36px; padding:26px 0 40px; border-top:1p
+.site-footer{margin-top:36px; padding:26px 0 40px; border-top:1px}
